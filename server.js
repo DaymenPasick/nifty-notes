@@ -1,9 +1,7 @@
 //Get started button should take us to notetaking page 
 
 
-
 //Existing notes should flow to the left of the page when notetaker starts
-
 
 
 //Starting note page should just have a sample Note Title and Note Text space
@@ -17,4 +15,5 @@
 //when content is entered in either title or text on the note
 //the clear form button should populate
 
-//when data is typed into text title AND text
+//when data is typed into text title AND text fields, 
+//save button should be generated
