@@ -24,3 +24,10 @@ app.use(express.static('public'));
 app.get('/', (req, res) => 
     res.sendFile(path.join(__dirname, 'views/index.html'))
 )
+
+
+
+//will watch activity on our server PORT and log a link in the terminal
+app.listen(PORT, () => 
+    console.log(`App listening at http://localhost:${PORT}`)
+);
