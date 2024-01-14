@@ -16,4 +16,14 @@
 //the clear form button should populate
 
 //when data is typed into text title AND text fields, 
-//save button should be generated
+//save button should be generated 
+
+//clicking on any of the existing notes should populate that data
+//in the placeholder title and text fields
+//in the center of the page
+//should also populate the new note button
+
+
+//Aesthetic issue, but currently the note title and text fields are not
+//positioned properly
+//They should also have their content displayed without the form borders
