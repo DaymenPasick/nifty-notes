@@ -13,14 +13,24 @@ notes.get('/', (req, res) => res.json(dbData))
 
 //will post saved note text and title as a new object in db
 notes.post('/', (req, res) => {
-    const data = fs.readFileSync('./db/db.json', 'utf8')
+    
+
+
+    const { title, text } = req.body
+
+        const newNote = {
+            title,
+            text,
+            //uses helpers/uuid to generate a random it
+            id: uuid()
+        }
 
     //looks like js/index.js requires a ids to faciliate
     //some of its methods. So we need to add ids to the note object returns
 
 
 
-
+    const data = fs.readFileSync('./db/db.json', 'utf8')
     //sets const dbNotes to existing or new array
     const dbNotes = data ?JSON.parse(data) : []
     dbNotes.push(req.body)
