@@ -9,6 +9,7 @@ const uuid = require('./helpers/uuid');
 //set the port to our local server space
 const PORT = 3001;
 
+//need to make an API router to filter client requests through
 
 const app = express();
 
@@ -26,6 +27,11 @@ app.get('/', (req, res) =>
 )
 
 
+//should handle client request /api/notes
+//and send them to views/notes.html
+app.get('/api/notes', (req, res) => 
+    res.sendFile(path.join(__dirname, 'views/notes.html'))
+)
 
 //will watch activity on our server PORT and log a link in the terminal
 app.listen(PORT, () => 
