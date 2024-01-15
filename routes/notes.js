@@ -9,7 +9,7 @@ const path = require('path');
 const uuid = require('../helpers/uuid')
 
 notes.get('/', (req, res) => 
-    res.sendFile(path.join(__dirname, 'views/notes.html'))
+    res.sendFile(path.join(__dirname, '../views/notes.html'))
 )
 
 
