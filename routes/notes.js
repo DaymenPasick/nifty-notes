@@ -22,7 +22,7 @@ notes.get('/', (req, res) => {
 notes.post('/', (req, res) => {
     
     //taking in req.body and setting new const via destructing
-    const { title, text, id } = req.body;
+    const { title, text} = req.body;
 
         //use above destructuring to create a newNote object to be pushed into db
         const newNote = {
@@ -42,6 +42,7 @@ notes.post('/', (req, res) => {
 
     //writes new note back into db
     fs.writeFileSync('./db/db.json', dbDataString)
+    res.json(req.body)
 })
 
 
