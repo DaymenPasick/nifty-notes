@@ -16,14 +16,14 @@ notes.post('/', (req, res) => {
     
 
     //taking in req.body and setting new const via destructing
-    const { title, text } = req.body;
+    const { title, text, id } = req.body;
 
 
         //use above destructuring to create a newNote object to be pushed into db
         const newNote = {
             title,
             text,
-            id: uuid(),
+            id: uuid()
         }
 
 
