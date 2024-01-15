@@ -13,9 +13,11 @@ const uuid = require('../helpers/uuid')
 notes.get('/', (req, res) => res.json(dbData))
 
 
+//will post saved note text and title as a new object in db
 
+//currently we are being sent a JSON.stringified note via a post request
+//we need a way to write that data into the db
 notes.post('/', (req, res) => res.json(dbData))
-
 
 
 
