@@ -1,7 +1,7 @@
 
 //Existing notes should flow to the left of the page when notetaker starts
 
-//
+//save button not populateing new notes to the left column
 
 //clicking new note button should allow user to click and edit 
 //inside of the note title and note text
