@@ -8,7 +8,8 @@ const fs = require('fs');
 const uuid = require('./helpers/uuid');
 
 //set the port to our local server space
-const PORT = 3001;
+//using process.env.PORT to make it compatible with other environments(heroku)
+const PORT = process.env.PORT ?? 3001;
 
 const app = express();
 
