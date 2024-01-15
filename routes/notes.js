@@ -17,7 +17,17 @@ notes.get('/', (req, res) => res.json(dbData))
 
 //currently we are being sent a JSON.stringified note via a post request
 //we need a way to write that data into the db
-notes.post('/', (req, res) => res.json(dbData))
+notes.post('/', (req, res) => {
+    const data = fs.readFileSync('../db/db.json', 'utf8')
+    const dbNotes = data ?JSON.parse(data) : []
+    dbNotes.push(req.body)
+
+
+
+
+
+
+})
 
 
 
