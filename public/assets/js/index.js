@@ -1,3 +1,5 @@
+
+
 let noteForm;
 let noteTitle;
 let noteText;
@@ -191,6 +193,8 @@ if (window.location.pathname === '/api/notes') {
   noteForm.addEventListener('input', handleRenderBtns);
 }
 
+
+
+
 getAndRenderNotes();
 
-module.exports = getAndRenderNotes

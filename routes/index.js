@@ -1,4 +1,4 @@
-// // this will facilitate routes starting with /api
+// this will facilitate routes starting with /api
 
 //specifically calling for the router() in express rather than the entire express module
 const router = require('express').Router()
