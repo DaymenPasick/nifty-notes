@@ -9,8 +9,6 @@ const uuid = require('./helpers/uuid');
 //set the port to our local server space
 const PORT = 3001;
 
-//need to make an API router to filter client requests through
-
 const app = express();
 
 //enables handling of json and urlencoded form data
@@ -25,6 +23,13 @@ app.use(express.static('public'));
 app.get('/', (req, res) => 
     res.sendFile(path.join(__dirname, 'views/index.html'))
 )
+
+
+//need to make an API router to filter client requests through
+const api = require('./routes/index')
+app.use('/api', api)
+
+
 
 
 //should handle client request /api/notes
