@@ -2,14 +2,9 @@
 
 //specifically calling for the router() in express rather than the entire express module
 const router = require('express').Router()
-const notesRoute = require('../views/notes.html')
+const notesRoute = require('./notes')
 
-
-// router.use('/notes', (req, res) => 
-//     res.sendFile(path.join(__dirname, 'views/notes.html'))
-// )
-
-
+//will handle any api/notes client request 
 router.use('/notes', notesRoute);
 
 
