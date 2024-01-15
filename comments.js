@@ -1,7 +1,3 @@
-//Get started button should take us to notetaking page 
-// 1)get started makes a client call to server/notes
-// 2)this should be our homepage with all the main buttons, notes, and  functionality
-
 
 //Existing notes should flow to the left of the page when notetaker starts
 

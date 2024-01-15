@@ -4,7 +4,7 @@
 const router = require('express').Router()
 const notesRoute = require('./notes')
 
-//will handle any api/notes client request 
+//will handle any api/notes client request and have it use routes/notes.js file
 router.use('/notes', notesRoute);
 
 

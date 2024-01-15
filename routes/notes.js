@@ -8,12 +8,9 @@ const path = require('path');
 //will keep this require here for now incase we want to utilize the helpers/uuid() on this file
 const uuid = require('../helpers/uuid')
 
+//will send user to the main notes html page
 notes.get('/', (req, res) => 
     res.sendFile(path.join(__dirname, '../views/notes.html'))
 )
-
-
-
-
 
 module.exports = notes
