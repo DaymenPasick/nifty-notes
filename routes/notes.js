@@ -8,12 +8,14 @@ const path = require('path')
 const uuid = require('../helpers/uuid')
 
 //will send db notes data as a response to client get api/notes request
-notes.get('/', (req, res) =>
+notes.get('/', (req, res) => {
 
-//res needs to be newly created persisting db
+ const data = fs.readFileSync('./db/db.json', 'utf8')
+ const dbNotes = data ?JSON.parse(data) : []
 
 
-res.json(dbData))
+ res.json(dbNotes)
+})
 
 
 //will post saved note  as a new object in db and give it an additional id key
