@@ -12,19 +12,15 @@
 
 ## Usage
 
-- Click on the following link to watch a "How To" video guide!:
- (https://www.awesomescreenshot.com/video/23872707?key=421430003d13cb6f69ebef32ce188c34)
+- Click here to view your live app!:
+ (https://nifty-notes-e32363e861cc.herokuapp.com/notes)
+
 
    
-- Terminal prompts to populate your newREADME
+- Sample Image of Your Nift-Notes app!
     ![Sample README](./assets/Note-Taker.png)   
    
    
-- Generated newREADME sample
-    ![Sample SVG Logo](./assets/imgs/logo.svg)
-    
-
-
 
 ## License
 
