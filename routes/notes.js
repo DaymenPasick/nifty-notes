@@ -13,4 +13,7 @@ notes.get('/', (req, res) =>
     res.sendFile(path.join(__dirname, '../views/notes.html'))
 )
 
+
+
+
 module.exports = notes

@@ -27,6 +27,10 @@ app.get('/', (req, res) =>
 )
 
 
+app.get('/notes', (req, res) =>
+    res.sendFile(path.join(__dirname, 'views/notes.html'))
+)
+
 //will listen for client requests starting with /api and take them to routes/index, which will 
 //redirect their requests accordingly
 const api = require('./routes/index')
