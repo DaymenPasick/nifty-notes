@@ -25,9 +25,9 @@ app.get('/', (req, res) =>
 )
 
 
-//need to make an API router to filter client requests through
-const api = require('./routes/index')
-app.use('/api', api)
+// //need to make an API router to filter client requests through
+// const api = require('./routes/index')
+// app.use('/api', api)
 
 
 
