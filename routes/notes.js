@@ -1,23 +1,20 @@
 //this file will handle client reqs for api/notes
 const fs = require('fs')
 const notes = require('express').Router()
-const path = require('path');
 const dbData = require('../db/db.json')
 
-//will keep this require here for now incase we want to utilize the helpers/uuid() on this file
+//utiluzes uuid function from helper/uuid
 const uuid = require('../helpers/uuid')
 
-//will send db notes data as a response to client api/notes request
+//will send db notes data as a response to client get api/notes request
 notes.get('/', (req, res) => res.json(dbData))
 
 
-//will post saved note text and title as a new object in db
+//will post saved note  as a new object in db and give it an additional id key
 notes.post('/', (req, res) => {
     
-
     //taking in req.body and setting new const via destructing
     const { title, text, id } = req.body;
-
 
         //use above destructuring to create a newNote object to be pushed into db
         const newNote = {
