@@ -18,15 +18,14 @@ notes.get('/', (req, res) => res.json(dbData))
 //currently we are being sent a JSON.stringified note via a post request
 //we need a way to write that data into the db
 notes.post('/', (req, res) => {
-    const data = fs.readFileSync('../db/db.json', 'utf8')
+    const data = fs.readFileSync('./db/db.json', 'utf8')
     const dbNotes = data ?JSON.parse(data) : []
     dbNotes.push(req.body)
 
+    //should handle stringifying parsed json and formatting the spaceing in db
+    const dbDataString = JSON.stringify(dbNotes, null, 2);
 
-
-
-
-
+    fs.writeFileSync('./db/db.json', dbDataString)
 })
 
 
