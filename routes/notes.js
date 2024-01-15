@@ -15,25 +15,21 @@ notes.get('/', (req, res) => res.json(dbData))
 notes.post('/', (req, res) => {
     
 
-
+    //taking in req.body and setting new const via destructing
     const { title, text } = req.body
 
+        //use above destructuring to create a newNote object to be pushed into db
         const newNote = {
             title,
             text,
-            //uses helpers/uuid to generate a random it
-            id: uuid()
+            id: uuid(),
         }
-
-    //looks like js/index.js requires a ids to faciliate
-    //some of its methods. So we need to add ids to the note object returns
-
 
 
     const data = fs.readFileSync('./db/db.json', 'utf8')
     //sets const dbNotes to existing or new array
     const dbNotes = data ?JSON.parse(data) : []
-    dbNotes.push(req.body)
+    dbNotes.push(newNote)
 
     //should handle stringifying parsed json and formatting the spaceing in db
     const dbDataString = JSON.stringify(dbNotes, null, 2);
