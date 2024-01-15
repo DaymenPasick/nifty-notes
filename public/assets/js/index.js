@@ -192,3 +192,5 @@ if (window.location.pathname === '/api/notes') {
 }
 
 getAndRenderNotes();
+
+module.exports = getAndRenderNotes

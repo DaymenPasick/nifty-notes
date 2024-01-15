@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const getAndRenderNotes = require('./public/assets/js/index')
 
 //access uuid in helpers to generate unique IDs 
 const uuid = require('./helpers/uuid');
@@ -25,9 +26,12 @@ app.get('/', (req, res) =>
 )
 
 
-// //need to make an API router to filter client requests through
+//will listen for client requests starting with /api and take them to routes/index, which will 
+//redirect their requests accordingly
 const api = require('./routes/index')
 app.use('/api', api)
+
+
 
 
 //will watch activity on our server PORT and log a link in the terminal
