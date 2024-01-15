@@ -1,30 +1,11 @@
 [
   {
-    "title": "Test Title",
-    "text": "Test text"
+    "title": "asdasdas",
+    "text": "adsaas"
   },
   {
-    "title": "adsa",
-    "text": "asdsaa"
-  },
-  {
-    "title": "adsa",
-    "text": "asdsaa"
-  },
-  {
-    "title": "adsa",
-    "text": "asdsaa"
-  },
-  {
-    "title": "adsa",
-    "text": "asdsaa"
-  },
-  {
-    "title": "nbooo",
-    "text": "asdadsaa"
-  },
-  {
-    "title": "This note",
-    "text": "should have an id"
+    "title": "asdasdas",
+    "text": "adsaas",
+    "id": "uuid()"
   }
 ]
