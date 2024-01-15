@@ -10,6 +10,7 @@ const uuid = require('../helpers/uuid')
 //will send db notes data as a response to client get api/notes request
 notes.get('/', (req, res) => {
 
+ //sets const dbNotes to existing or new array   
  const data = fs.readFileSync('./db/db.json', 'utf8')
  const dbNotes = data ?JSON.parse(data) : []
 
