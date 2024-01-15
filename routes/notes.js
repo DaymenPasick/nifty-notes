@@ -1,6 +1,4 @@
 //this file will handle client reqs for api/notes
-
-//specifically calling for the router() in express rather than the entire express module
 const fs = require('fs')
 const notes = require('express').Router()
 const path = require('path');
@@ -16,7 +14,13 @@ notes.get('/', (req, res) => res.json(dbData))
 //will post saved note text and title as a new object in db
 notes.post('/', (req, res) => {
     const data = fs.readFileSync('./db/db.json', 'utf8')
-    
+
+    //looks like js/index.js requires a ids to faciliate
+    //some of its methods. So we need to add ids to the note object returns
+
+
+
+
     //sets const dbNotes to existing or new array
     const dbNotes = data ?JSON.parse(data) : []
     dbNotes.push(req.body)
