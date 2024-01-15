@@ -26,17 +26,15 @@ app.get('/', (req, res) =>
 
 
 // //need to make an API router to filter client requests through
-// const api = require('./routes/index')
-// app.use('/api', api)
+const api = require('./routes/index')
+app.use('/api', api)
 
 
-
-
-//should handle client request /api/notes
-//and send them to views/notes.html
-app.get('/api/notes', (req, res) => 
-    res.sendFile(path.join(__dirname, 'views/notes.html'))
-)
+// //should handle client request /api/notes
+// //and send them to views/notes.html
+// app.get('/api/notes', (req, res) => 
+//     res.sendFile(path.join(__dirname, 'views/notes.html'))
+// )
 
 //will watch activity on our server PORT and log a link in the terminal
 app.listen(PORT, () => 
