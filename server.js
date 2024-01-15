@@ -12,9 +12,11 @@ const PORT = 3001;
 
 const app = express();
 
+
 //enables handling of json and urlencoded form data
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+
 
 //indicating use of static Middleware and pointing it to public directory
 app.use(express.static('public'));
@@ -25,7 +27,7 @@ app.get('/', (req, res) =>
     res.sendFile(path.join(__dirname, 'views/index.html'))
 )
 
-
+//will make 'get started' button's request to /notes populate the main app page
 app.get('/notes', (req, res) =>
     res.sendFile(path.join(__dirname, 'views/notes.html'))
 )
@@ -34,7 +36,6 @@ app.get('/notes', (req, res) =>
 //redirect their requests accordingly
 const api = require('./routes/index')
 app.use('/api', api)
-
 
 
 

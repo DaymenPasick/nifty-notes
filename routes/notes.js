@@ -2,12 +2,18 @@
 const fs = require('fs')
 const notes = require('express').Router()
 const dbData = require('../db/db.json')
+const path = require('path')
 
 //utiluzes uuid function from helper/uuid
 const uuid = require('../helpers/uuid')
 
 //will send db notes data as a response to client get api/notes request
-notes.get('/', (req, res) => res.json(dbData))
+notes.get('/', (req, res) =>
+
+//res needs to be newly created persisting db
+
+
+res.json(dbData))
 
 
 //will post saved note  as a new object in db and give it an additional id key
